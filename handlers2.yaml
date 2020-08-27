@@ -5,7 +5,7 @@
       copy:
         src: script.sh
         dest: /home/ubuntu/
-      notify: restart ntp
+      notify: restart docker
     - name: Copying with Template
       template:
         src: testfile.txt.j2
@@ -19,4 +19,8 @@
     - name: restart ntp
       service:
         name: ntp
+        state: restarted
+    - name: restart docker
+      service:
+        name: docker
         state: restarted
