@@ -1,0 +1,7 @@
+---
+- hosts: web
+  tasks:
+    - name: Copying with template
+      template:
+        src: testfile.txt.j2
+        dest: /home/ubuntu/testfile.txt

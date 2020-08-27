@@ -1,0 +1,11 @@
+---
+- hosts: web
+  tasks:
+    - name: creating users
+      user:
+        name: "{{ item.name }}"
+        uid: "{{ item.uid }}"
+        state: present
+      with_items:
+        - { name: user1, uid: 1200 }
+        - { name: user2, uid: 1230 }

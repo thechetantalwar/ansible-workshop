@@ -1,0 +1,9 @@
+---
+- hosts: web
+  tasks:
+    - name: copy the file
+      copy:
+        src: script.sh
+        dest: /tmp/
+    - name: executing shell
+      shell: /tmp/script.sh
