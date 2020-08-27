@@ -6,12 +6,14 @@
         name: test
         uid: 8888
         home: /var/tmp/test
+        state: present
     - name: crete usertest user
       user:
         name: usertest
         shell: /bin/bash
         uid: 6666
         comment: my first user
+        state: present
     - name: create grouptest group
       group:
         name: grouptest
