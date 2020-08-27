@@ -1,0 +1,13 @@
+---
+- hosts: web
+  tasks:
+    - name: creating a file
+      file:
+        path: /home/ubuntu/testfile
+        state: touch
+    - name: creating a directory
+      file:
+        path: /home/ubuntu/testdir
+        state: directory
+        mode: 0777
+        owner: chetan

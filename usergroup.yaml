@@ -1,0 +1,12 @@
+---
+- hosts: web
+  tasks:
+    - name: creating group
+      group:
+        name: training
+        state: present
+    - name: creating user
+      user:
+        name: cape
+        state: present
+        group: training

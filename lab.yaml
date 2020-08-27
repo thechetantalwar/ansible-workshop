@@ -1,0 +1,32 @@
+---
+- hosts: web
+  tasks:
+    - name: create user test
+      user:
+        name: test
+        uid: 8888
+        home: /var/tmp/test
+    - name: crete usertest user
+      user:
+        name: usertest
+        shell: /bin/bash
+        uid: 6666
+        comment: my first user
+    - name: create grouptest group
+      group:
+        name: grouptest
+        gid: 7777
+    - name: files and directories
+      file:
+        path: /tmp/rootdir
+        owner: root
+        state: directory
+    - name: create file
+      file:
+        path: /tmp/rootdir/testfile
+        owner: test
+        state: touch
+    - name: copy files
+      copy:
+        src: /var/log/syslog
+        dest: /tmp/rootdir

@@ -1,0 +1,8 @@
+---
+- hosts: web
+  tasks:
+    - name: creating a user
+      user:
+        uid: 1004
+        name: chetan
+        state: present

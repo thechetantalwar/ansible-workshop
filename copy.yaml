@@ -1,0 +1,8 @@
+---
+- hosts: web
+  tasks:
+    - name: copying a file
+      copy:
+        src: /tmp/somefile
+        dest: /home/ubuntu/
+        mode: 0644
