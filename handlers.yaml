@@ -1,0 +1,21 @@
+---
+- hosts: web
+  tasks:
+    - name: Copying a file
+      copy:
+        src: script.sh
+        dest: /home/ubuntu/
+    - name: Copying with Template
+      template:
+        src: testfile.txt.j2
+        dest: /home/ubuntu/testfile.txt
+      notify: restart ntp
+    - name: Creating a directory
+      file:
+        path: /home/ubuntu/somedir
+        state: directory
+  handlers:
+    - name: restart ntp
+      service:
+        name: ntp
+        state: restarted
