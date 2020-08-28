@@ -1,0 +1,13 @@
+---
+- hosts: win
+  tasks:
+    - name: Create Directory
+      win_file:
+        path: C:\win10
+        state: directory
+      when: ansible_distribution_major_version == "10" and ansible_distribution == "Microsoft"
+    - name: Create Directory on another
+      win_file:
+        path: C:\win9
+        state: directory 
+      when: ansible_distribution_major_version == "9" or ansible_distribution_major_version == "10"
