@@ -1,0 +1,5 @@
+---
+- hosts: win
+  tasks:
+    - name: Running Windows SHell Command
+      win_shell: Get-Service > C:\testfile.txt
