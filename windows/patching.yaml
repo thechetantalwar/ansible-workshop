@@ -1,0 +1,12 @@
+---
+- hosts: win
+  tasks:
+    - name: updates
+      win_updates:
+        category_names:
+          - SecurityUpdates
+          - CriticalUpdates
+        whitelist:
+          - KB....
+          - KB......
+        reboot: yes
