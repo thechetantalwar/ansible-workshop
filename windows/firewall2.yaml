@@ -1,0 +1,12 @@
+---
+- hosts: win
+  tasks:
+    - name: updating firewall rule
+      win_firewall_rule:
+        name: Rule By Ansible
+        localport: 8080-8090
+        action: allow
+        direction: in
+        protocol: tcp
+        state: present
+        enabled: yes
