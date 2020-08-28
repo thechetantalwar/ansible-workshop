@@ -1,0 +1,12 @@
+---
+- hosts: win
+  vars:
+    user1: chetan3
+    passwd: Win@123
+  tasks:
+    - name: creation of user
+      win_user:
+        name: "{{ user1 }}"
+        password: "{{ passwd }}"
+        group: development
+        state: present

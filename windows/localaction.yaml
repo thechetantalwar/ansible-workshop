@@ -1,0 +1,7 @@
+---
+- hosts: win
+  tasks:
+    - name:  iis reset
+      win_shell: '& {iisreset}'
+      register: resetout
+    - local_action:  copy content={{ resetout.stdout }} dest=logs.txt
