@@ -1,0 +1,11 @@
+---
+- hosts: win
+  tasks:
+    - name: Copy html file
+      win_copy:
+        src: webpage.html
+        dest: "C:\\inetpub\\wwwroot\\"
+      notify: restart iis
+  handlers:
+    - name: restart iis
+      win_shell: '& {iisreset}' 
