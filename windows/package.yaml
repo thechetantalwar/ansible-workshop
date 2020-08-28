@@ -1,0 +1,11 @@
+---
+- hosts: win
+  tasks:
+    - name: Installing git
+      win_chocolatey:
+        name: git
+        state: present
+    - name: Installing Google Chrome
+      win_chocolatey:
+        name: googlechrome
+        state: present
