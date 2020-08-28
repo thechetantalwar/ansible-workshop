@@ -1,0 +1,11 @@
+---
+- hosts: win
+  tasks:
+    - name: Copying a file
+      win_copy:
+        src: somefile.txt
+        dest: C:\
+    - name: Copy using template
+      win_template:
+        src: template.txt.j2
+        dest: C:\template.txt

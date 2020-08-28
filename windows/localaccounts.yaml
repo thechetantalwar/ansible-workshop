@@ -1,0 +1,15 @@
+---
+- hosts: win
+  tasks:
+    - name: creating a group
+      win_group:
+        name: development
+        description: Group for Developers
+        state: present
+    - name: Creating a user
+      win_user:
+        name: chetan2
+        state: present
+        password: Win@123
+        groups: 
+          - development

@@ -1,0 +1,11 @@
+---
+- hosts: win
+  tasks:
+    - name: Installing Package
+      win_chocolatey:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - putty.install
+        - 7zip
+      
