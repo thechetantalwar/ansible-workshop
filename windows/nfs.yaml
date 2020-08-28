@@ -1,0 +1,7 @@
+---
+- hosts: win
+  tasks:
+    - name: nfs install
+      win_feature:
+        name: NFS-Client
+        state: present

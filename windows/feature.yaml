@@ -1,0 +1,13 @@
+---
+- hosts: win
+  tasks:
+    - name: installing IIS
+      win_feature:
+        name: 
+        - Web-Server
+        - Web-Common-HTTP
+        state: present
+    - name: magt. console
+      win_feature:
+        name: Web-Mgmt-Tools
+        state: present
