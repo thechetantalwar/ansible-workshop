@@ -1,0 +1,9 @@
+---
+- hosts: win
+  tasks:
+    - name: Set up environment variable
+      win_environment:
+        name: APP_PATH
+        value: 'C:\temp'
+        level: machine
+        state: present

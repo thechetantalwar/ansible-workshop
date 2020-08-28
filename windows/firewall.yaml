@@ -10,7 +10,7 @@
         protocol: tcp
         state: present
         enabled: yes
-    - name: updating firewall out rule
+    - name: updating firewall rule
       win_firewall_rule:
         name: Rule Out By Ansible
         localport: 8080
