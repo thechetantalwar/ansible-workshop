@@ -1,0 +1,10 @@
+---
+- name: Copy a file
+  copy:
+    src: ubuntu.txt
+    dest: /home/ubuntu/
+- name: Installing APache
+  apt:
+    name: apache2
+    state: present
+    update_cache: true

@@ -1,10 +1,10 @@
 ---
-- name: install todo
+- name: install "{{ todo }}"  
   apt:
     name: "{{ todo }}"
     state: present
 - name: moving a file
   template:
     src: somefile.txt.j2
-    dest: /home/ubuntu/somefile.txt
+    dest: /home/ubuntu/{{ todo }}.txt
   notify: restart ntp

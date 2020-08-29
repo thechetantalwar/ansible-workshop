@@ -1,0 +1,9 @@
+---
+- name: Ubutnu Stuff
+  include_tasks: ubuntu.yaml
+  when:
+    ansible_os_family == 'Debian'
+- name: Centos Stuff
+  include_tasks: centos.yaml
+  when:
+    ansible_os_family == 'RedHat'
