@@ -1,0 +1,9 @@
+Lets create a simple role to understand how actual role works.
+
+Create a Role Structure.
+
+Use two special keywords register and debug to troubleshoot .
+
+Define the role in the playbook directory, test and execute the playbook.
+
+

@@ -1,0 +1,6 @@
+---
+- name: copying the file
+  copy:
+    src: RolesExcercise.txt
+    dest: "{{ location }}"
+    owner: "{{ fileowner }}"
