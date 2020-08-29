@@ -2,7 +2,7 @@
 - name: Copy a file
   copy:
     src: ubuntu.txt
-    dest: /home/ubuntu/
+    dest: /home/ubuntu/{{somevar}}.txt
 - name: Installing APache
   apt:
     name: apache2

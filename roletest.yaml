@@ -1,4 +1,9 @@
 ---
 - hosts: web
-  roles:
-    - inclusion-role
+  tasks:
+    - name: including role
+      include_role:
+        name: inclusion-role
+    - name: include role2
+      include_role:
+        name: role2
