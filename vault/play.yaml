@@ -1,0 +1,9 @@
+---
+- hosts: web
+  vars_files:
+    - vars.yaml
+  tasks:
+    - name: creating user
+      user:
+        name: "{{ username }}"
+        state: present
