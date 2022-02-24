@@ -1,0 +1,9 @@
+---
+- hosts: win
+  tasks:
+    - name: Ensure User is in Admin Group
+      win_user:
+        name: ansible
+        state: present
+        groups: 
+          - Administrators
