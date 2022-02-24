@@ -3,7 +3,7 @@
   tasks:
     - name: Ensure User is in Admin Group
       win_user:
-        name: ansible
+        name: "{{ user_name }}"
         state: present
         groups: 
           - Administrators
